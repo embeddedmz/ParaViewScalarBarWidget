@@ -182,7 +182,7 @@ void vtkParaViewScalarBar::SetTitle(const std::string& title)
 //----------------------------------------------------------------------------
 const std::string& vtkParaViewScalarBar::GetTitle()
 {
-    (this->ScalarBarActor->GetTitle()) ? this->ScalarBarActor->GetTitle() : "";
+    return (this->ScalarBarActor->GetTitle()) ? this->ScalarBarActor->GetTitle() : "";
 }
 
 //----------------------------------------------------------------------------
@@ -194,7 +194,7 @@ void vtkParaViewScalarBar::SetComponentTitle(const std::string& title)
 //----------------------------------------------------------------------------
 const std::string& vtkParaViewScalarBar::GetComponentTitle()
 {
-    (this->ScalarBarActor->GetComponentTitle()) ? this->ScalarBarActor->GetComponentTitle() : "";
+    return (this->ScalarBarActor->GetComponentTitle()) ? this->ScalarBarActor->GetComponentTitle() : "";
 }
 
 //----------------------------------------------------------------------------
