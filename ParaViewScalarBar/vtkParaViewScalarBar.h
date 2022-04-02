@@ -14,6 +14,16 @@ class vtkRenderWindowInteractor;
 class vtkScalarBarWidget;
 class vtkWidgetRepresentation;
 
+/**
+ * This class replaces the VTK's vtkScalarBarWidget class because it doesn't display ticks in the scale.
+ * The original class comes from the ParaView project.
+ * This standalone version is thanks to Amine Mzoughi (https://github.com/embeddedmz)
+ * Source: https://github.com/embeddedmz/ParaViewScalarBarWidget
+ *
+ * VTK bug report: https://gitlab.kitware.com/vtk/vtk/issues/17751
+ *       Once this bug is solved (still open as of 2020-04-12), this entire commit can be reverted
+ *       favoring the simpler code with vtkScalarBarWidget.
+ */
 class vtkParaViewScalarBar : public vtkObject
 {
 public:
